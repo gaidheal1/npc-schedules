@@ -46,9 +46,22 @@ const schedules = {
 npcs[0].schedule = schedules.farmer;
 
 console.log("hello world");
+const now = New Date;
+hours = getHours(now);
+
+for(q=0; q < npcs.length; q++) {
+	for(i=0; i < npcs[q]schedule.length; i++) {
+		let actTime = npcs[q].schedule[i].time.split(":");
+		if (hours > actTime[0]]) {
+			npcs[q].activity = npcs[q].schedule[i];
+			console.log(npcs[q].activity.activity)
+			return;
+		};
+	};
+};
 
 let allHTML = ``;
 npcs.forEach((char) => allHTML+= `
-			<span>${char.fname} is a ${char.job}</span>`);
+			<div class="char-text"><span>${char.fname} is a ${char.job}</span><span>They are ${char.activity.activity}</span></div>`);
 
 contentBlock.innerHTML = allHTML;
