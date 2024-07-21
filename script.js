@@ -48,5 +48,5 @@ const schedules = {
 
 npcs[0].schedule = schedules.farmer;
 
-console.log(npcs[0]);
+console.log("hello world");
 contentBlock.innerHTML = `<span>Hallo, ${npcs[0].name}</span>`;
