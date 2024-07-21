@@ -46,4 +46,9 @@ const schedules = {
 npcs[0].schedule = schedules.farmer;
 
 console.log("hello world");
-contentBlock.innerHTML = `<span>Hallo, ${npcs[0].fname}</span>`;
+
+let allHTML = ``;
+npcs.forEach((char) => allHTML+= `
+			<span>${char.fname} is a ${char.job}</span>`);
+
+contentBlock.innerHTML = allHTML;
