@@ -11,13 +11,11 @@ const npcs = [
 		fname: "Anne",
 		job: "farmer",
 		schedule : {},
-	}
-
-]
+	},
+];
 
 const schedules = {
-	farmer : {
-		day: [
+	farmer : [
 			{
 				id : 0,
 				//name: "wake up",
@@ -33,18 +31,17 @@ const schedules = {
 				time: "10:00",
 				//location : "in the office",
 				activity : "answering emails",
-			}
+			},
 			{
 				id : 2,
 				//name: "eating",
-				isTime: true;
+				isTime: true,
 				time: "17:00",
 				//location: "in the kitchen",
 				activity : "eating a snack"
 			}
 		]
-	},
-}
+};
 
 npcs[0].schedule = schedules.farmer;
 
